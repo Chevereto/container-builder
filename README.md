@@ -107,9 +107,6 @@ docker run -d \
   -e CHEVERETO_DB_PASS=user_database_password \
   -e CHEVERETO_DB_PORT=3306 \
   -e CHEVERETO_DB_NAME=chevereto \
-  -e CHEVERETO_ASSET_STORAGE_TYPE=local \
-  -e CHEVERETO_ASSET_STORAGE_URL=/images/_assets/ \
-  -e CHEVERETO_ASSET_STORAGE_BUCKET=/var/www/html/images/_assets/ \
   -e CHEVERETO_MAX_POST_SIZE=2G \
   -e CHEVERETO_MAX_UPLOAD_SIZE=2G \
   -v /var/www/html/images/ \

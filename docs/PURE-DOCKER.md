@@ -82,9 +82,6 @@ docker run -d \
   -e CHEVERETO_DB_PASS=user_database_password \
   -e CHEVERETO_DB_PORT=3306 \
   -e CHEVERETO_DB_NAME=chevereto \
-  -e CHEVERETO_ASSET_STORAGE_TYPE=local \
-  -e CHEVERETO_ASSET_STORAGE_URL=/images/_assets/ \
-  -e CHEVERETO_ASSET_STORAGE_BUCKET=/var/www/html/images/_assets/ \
   -e CHEVERETO_MAX_POST_SIZE=2G \
   -e CHEVERETO_MAX_UPLOAD_SIZE=2G \
   -v /var/www/html/images/ \
@@ -108,9 +105,6 @@ docker run -d \
   -e CHEVERETO_DB_PASS=user_database_password \
   -e CHEVERETO_DB_PORT=3306 \
   -e CHEVERETO_DB_NAME=chevereto \
-  -e CHEVERETO_ASSET_STORAGE_TYPE=local \
-  -e CHEVERETO_ASSET_STORAGE_URL=/images/_assets/ \
-  -e CHEVERETO_ASSET_STORAGE_BUCKET=/var/www/html/images/_assets/ \
   -e CHEVERETO_MAX_POST_SIZE=2G \
   -e CHEVERETO_MAX_UPLOAD_SIZE=2G \
   -v /var/www/html/images/ \
@@ -132,9 +126,6 @@ docker run -d \
   -e CHEVERETO_DB_PASS=user_database_password \
   -e CHEVERETO_DB_PORT=3306 \
   -e CHEVERETO_DB_NAME=chevereto \
-  -e CHEVERETO_ASSET_STORAGE_TYPE=local \
-  -e CHEVERETO_ASSET_STORAGE_URL=/images/_assets/ \
-  -e CHEVERETO_ASSET_STORAGE_BUCKET=/var/www/html/images/_assets/ \
   -e CHEVERETO_MAX_POST_SIZE=2G \
   -e CHEVERETO_MAX_UPLOAD_SIZE=2G \
   -e CHEVERETO_SERVICING=server \
@@ -189,17 +180,14 @@ services:
       CHEVERETO_HOSTNAME: hostname.com
       CHEVERETO_HOSTNAME_PATH: /
       CHEVERETO_HTTPS: 0
-      CHEVERETO_ASSET_STORAGE_TYPE: local
-      CHEVERETO_ASSET_STORAGE_URL: http://hostname.com/images/_assets/ #hostname-aware URL
-      CHEVERETO_ASSET_STORAGE_BUCKET: /var/www/html/images/_assets/
       CHEVERETO_MAX_POST_SIZE: 2G
       CHEVERETO_MAX_UPLOAD_SIZE: 2G
-      # CHEVERETO_SERVICING: server # uncomment to enable application filesystem upgrades
+      #CHEVERETO_SERVICING: server # uncomment to enable application filesystem upgrades
 
 volumes:
   database:
   storage:
-  # app: # uncomment when using CHEVERETO_SERVICING=server
+  #app: uncomment when using CHEVERETO_SERVICING=server
 
 networks:
   chevereto:

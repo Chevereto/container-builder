@@ -49,16 +49,12 @@ services:
       CHEVERETO_HOSTNAME: ${HOSTNAME}
       CHEVERETO_HOSTNAME_PATH: ${HOSTNAME_PATH}
       CHEVERETO_HTTPS: ${HTTPS}
-      CHEVERETO_ASSET_STORAGE_TYPE: local
-      CHEVERETO_ASSET_STORAGE_URL: ${URL}images/_assets/
-      CHEVERETO_ASSET_STORAGE_BUCKET: /var/www/html/images/_assets/
       CHEVERETO_ENCRYPTION_KEY: ${ENCRYPTION_KEY}
       CHEVERETO_MAX_POST_SIZE: 2G
       CHEVERETO_MAX_UPLOAD_SIZE: 2G
 
 volumes:
   database:
-  assets:
   storage:
   chevereto:
 
