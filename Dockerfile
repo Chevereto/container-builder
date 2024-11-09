@@ -38,11 +38,7 @@ RUN rm -rf /var/lib/apt/lists/*
 ARG VERSION=4.2
 ARG SERVICING=docker
 
-ENV CHEVERETO_DB_HOST=mariadb \
-    CHEVERETO_DB_NAME=chevereto \
-    CHEVERETO_DB_PASS=user_database_password \
-    CHEVERETO_DB_USER=chevereto \
-    CHEVERETO_ERROR_LOG=/dev/stderr \
+ENV CHEVERETO_ERROR_LOG=/dev/stderr \
     CHEVERETO_MAX_EXECUTION_TIME_SECONDS=30 \
     CHEVERETO_MAX_MEMORY_SIZE=512M \
     CHEVERETO_MAX_POST_SIZE=100M \
