@@ -90,9 +90,12 @@ docker run -d \
 
 ## Run free edition
 
-To run [chevereto/chevereto](https://github.com/chevereto/chevereto) (Chevereto free edition) you need to pass the environment targeting public image `ghcr.io/chevereto/chevereto:latest`.
+To run [chevereto/chevereto](https://github.com/chevereto/chevereto) (Chevereto free edition) you need to pass the environment targeting one of its container image mirrors:
 
-Alternatively, you can pass `chevereto/chevereto:latest` which is the [Chevereto mirror on DockerHub](https://hub.docker.com/r/chevereto/chevereto).
+* `ghcr.io/chevereto/chevereto:latest` ([GitHub Container Registry](https://github.com/chevereto/chevereto/pkgs/container/chevereto))
+* `chevereto/chevereto:latest` ([DockerHub](https://hub.docker.com/r/chevereto/chevereto))
+
+When using `CHEVERETO_SERVICING=docker` (default) it behaves as a pure docker container, meaning that the application filesystem persists. When using `CHEVERETO_SERVICING=server` you need to mount the application directory to persist the filesystem upgrades.
 
 > Note: For running this command you need to fill your own database credentials.
 
@@ -191,4 +194,3 @@ volumes:
 
 networks:
   chevereto:
-```
